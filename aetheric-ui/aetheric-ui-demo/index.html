@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetheric UI — Hardware-inspired Vanilla JS Components</title>
+  <script type="module" src="demo.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #111114;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      padding: 60px 40px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .header__eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ff8c00;
+      margin-bottom: 16px;
+    }
+
+    .header__title {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #f0f0f0;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .header__sub {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+
+    .header__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 100px;
+      background: #ff8c00;
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+
+    .header__cta:hover { opacity: 0.85; }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #1e1e1e;
+      margin: 0 40px;
+      width: calc(100% - 80px);
+    }
+
+    /* Sections */
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 40px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .section__label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #333;
+      margin-bottom: 32px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .light-bg {
+      background: #f0eeeb;
+      padding: 40px;
+      border-radius: 16px;
+    }
+
+    .warm-bg {
+      background: #f0d5c8;
+      padding: 40px;
+      border-radius: 16px;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 40px;
+      border-radius: 16px;
+    }
+
+    .sliding-wrap {
+      padding: 8px 16px;
+    }
+
+    /* Footer */
+    .footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer__brand {
+      font-size: 13px;
+      color: #333;
+      letter-spacing: 0.04em;
+    }
+
+    .footer__link {
+      font-size: 13px;
+      color: #ff8c00;
+      text-decoration: none;
+    }
+
+    .footer__link:hover { opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header__eyebrow">Aetheric UI — Wave 1 + Wave 2</div>
+    <h1 class="header__title">Hardware-inspired<br>Vanilla JS Components</h1>
+    <p class="header__sub">No React. No dependencies. No build step. Drop in a single file and it works.</p>
+    <a class="header__cta" href="https://aethericlabs.lemonsqueezy.com" target="_blank">
+      Get the components →
+    </a>
+  </div>
+
+  <!-- Toggles -->
+  <div class="section">
+    <div class="section__label">Wave 1 — Toggles</div>
+    <div class="row">
+      <ae-depression-toggle></ae-depression-toggle>
+      <ae-pill-toggle></ae-pill-toggle>
+      <div class="sliding-wrap">
+        <ae-sliding-toggle></ae-sliding-toggle>
+      </div>
+      <ae-hardware-button label="Unlock" icon="A"></ae-hardware-button>
+    </div>
+  </div>
+
+  <!-- Dark Buttons -->
+  <div class="section">
+    <div class="section__label">Wave 2 — Dark Buttons</div>
+    <div class="row">
+      <ae-keyboard-button icon="⌘"></ae-keyboard-button>
+      <ae-keyboard-button icon="⇧"></ae-keyboard-button>
+      <ae-keyboard-button icon="⌥"></ae-keyboard-button>
+      <ae-pill-cta label="Subscribe" arrow="→"></ae-pill-cta>
+      <ae-icon-button icon="f"></ae-icon-button>
+      <ae-icon-button icon="in"></ae-icon-button>
+      <ae-icon-button icon="x"></ae-icon-button>
+    </div>
+  </div>
+
+  <!-- Neon -->
+  <div class="section">
+    <div class="section__label">Wave 2 — Neon Buttons</div>
+    <div class="row">
+      <ae-neon-button label="Update" color="purple"></ae-neon-button>
+      <ae-neon-button label="Launch" color="blue"></ae-neon-button>
+      <ae-neon-button label="Ignite" color="amber"></ae-neon-button>
+    </div>
+  </div>
+
+  <!-- Light Buttons -->
+  <div class="section">
+    <div class="section__label">Wave 2 — Light Buttons</div>
+    <div class="light-bg">
+      <div class="row">
+        <ae-round-button icon="+"></ae-round-button>
+        <ae-round-button icon="×"></ae-round-button>
+        <ae-press-button label="Get started"></ae-press-button>
+        <ae-press-button label="Learn more"></ae-press-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Neo-brut -->
+  <div class="section">
+    <div class="section__label">Wave 2 — Neo-brut</div>
+    <div class="light-bg">
+      <div class="row">
+        <ae-neobrut-button label="Subscribe" icon="→"></ae-neobrut-button>
+        <ae-neobrut-button label="Get started" icon="↗"></ae-neobrut-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Soft -->
+  <div class="section">
+    <div class="section__label">Wave 2 — Soft UI</div>
+    <div class="warm-bg">
+      <div class="row">
+        <ae-soft-button label="More info" icon="⚡" color="#e8523a"></ae-soft-button>
+        <ae-soft-button label="Explore" icon="↗" color="#3a7bd5"></ae-soft-button>
+        <ae-soft-button label="Confirm" icon="✓" color="#2ecc71"></ae-soft-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Frosted -->
+  <div class="section">
+    <div class="section__label">Wave 2 — Frosted UI</div>
+    <div class="gradient-bg">
+      <div class="row">
+        <ae-frosted-button label="Search" icon="⌕"></ae-frosted-button>
+        <ae-frosted-button label="Explore" icon="↗"></ae-frosted-button>
+        <ae-frosted-button label="Add new" icon="+"></ae-frosted-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer__brand">AETHERIC UI</span>
+    <a class="footer__link" href="https://aethericlabs.lemonsqueezy.com" target="_blank">
+      Get the components →
+    </a>
+  </div>
+
+</body>
+</html>
